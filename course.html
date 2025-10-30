@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>AL_MUAZTECH</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/logoo-1.jpg" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+   <div class="container-fluid d-none d-lg-block bg-light">
+  <div class="row align-items-center py-3 px-xl-5">
+    <!-- Logo -->
+    <div class="col-lg-3 d-flex align-items-center justify-content-center">
+  <a href="index.html" class="text-decoration-none">
+    <img 
+      src="img/logoo-1.jpg" 
+      alt="AlMuaz Academy Logo" 
+      style="height: 70px; width: auto; border-radius: 10px; object-fit: contain; 
+             box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+      onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.25)';"
+      onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)';"
+    >
+  </a>
+</div>
+
+
+
+    <!-- Office Location -->
+    <div class="col-lg-3 text-lg-right mb-2 mb-lg-0">
+      <div class="d-inline-flex align-items-center">
+        <i class="fa fa-map-marker-alt fa-2x text-primary mr-3"></i>
+        <div class="text-left">
+          <h6 class="fw-semibold mb-1 text-dark">Our Office</h6>
+          <small class="text-muted">Lahore, Pakistan</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="col-lg-3 text-lg-right mb-2 mb-lg-0">
+      <div class="d-inline-flex align-items-center">
+        <i class="fa fa-envelope fa-2x text-primary mr-3"></i>
+        <div class="text-left">
+          <h6 class="fw-semibold mb-1 text-dark">Email Us</h6>
+          <small>
+  <a href="mailto:almuaztech@gmail.com" class="text-muted text-decoration-none">
+    almuaztech@gmail.com
+  </a>
+ </small>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Phone / WhatsApp -->
+    <div class="col-lg-3 text-lg-right">
+      <div class="d-inline-flex align-items-center">
+        <i class="fa fa-phone fa-2x text-primary mr-3"></i>
+        <div class="text-left">
+          <h6 class="fw-semibold mb-1 text-dark">Call Us</h6>
+          <small>
+            <a 
+              href="https://wa.me/923140530868?text=Assalamualaikum!%20I%20want%20to%20learn%20more%20about%20your%20online%20Quran%20classes."
+              target="_blank"
+              class="text-muted text-decoration-none"
+            >
+              +92 314 053 0868
+            </a>
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Topbar End -->
+
+<!-- Navbar Start -->
+<style>
+  /* Sticky Navbar */
+  .sticky-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    background: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+  }
+
+  /* Desktop Logo (hidden initially) */
+  #desktopLogo {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.5s ease;
+  }
+
+  /* Show Logo on Scroll */
+  .scrolled #desktopLogo {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  /* Hide Subjects on Scroll */
+  .scrolled .subjects-menu {
+    display: none !important;
+  }
+
+  /* Logo Styling */
+  #desktopLogo img,
+  #mobileLogo img {
+    height: 63px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  #desktopLogo img:hover,
+  #mobileLogo img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Navbar links */
+  .navbar-nav .nav-link {
+    font-weight: 500;
+    padding: 8px 16px;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link.active {
+    color: #007bff;
+  }
+
+  /* Navbar styling */
+  .navbar {
+    justify-content: center !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+  }
+
+  /* Mobile view adjustments */
+  @media (max-width: 991px) {
+    .navbar {
+      justify-content: space-between !important;
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+      padding-top: 4px !important;
+      padding-bottom: 4px !important;
+    }
+
+    /* Hide desktop logo */
+    #desktopLogo {
+      display: none !important;
+    }
+
+    /* Mobile logo left aligned */
+    #mobileLogo {
+      display: block !important;
+      margin-right: auto;
+    }
+
+    /* Smaller logo for mobile */
+    #mobileLogo img {
+      height: 52px;
+    }
+
+    /* Compact toggler icon */
+    .navbar-toggler {
+      padding: 3px 8px !important;
+      border: none !important;
+    }
+  }
+</style>
+
+<div class="container-fluid sticky-navbar" id="mainNavbarContainer">
+  <div class="row border-top px-xl-5 align-items-center">
+
+    <!-- Subjects (Desktop Only) -->
+    <div class="col-lg-3 d-none d-lg-block subjects-menu">
+      <a
+        class="d-flex align-items-center justify-content-between bg-secondary w-100 text-decoration-none"
+        data-toggle="collapse"
+        href="#navbar-vertical"
+        style="height: 67px; padding: 0 30px;"
+      >
+        <h5 class="text-primary m-0">
+          <i class="fa fa-book-open mr-2"></i>Subjects
+        </h5>
+        <i class="fa fa-angle-down text-primary"></i>
+      </a>
+      <nav
+        class="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0 bg-light"
+        id="navbar-vertical"
+        style="width: calc(100% - 30px); z-index: 9;"
+      >
+        <div class="navbar-nav w-100">
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link" data-toggle="dropdown">
+              Islamic Courses <i class="fa fa-angle-down float-right mt-1"></i>
+            </a>
+            <div
+              class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0"
+            >
+              <a href="#" class="dropdown-item">Hifz Quran Course</a>
+              <a href="#" class="dropdown-item">Noorani Qaida Course</a>
+              <a href="#" class="dropdown-item">Tafseer Quran Course</a>
+              <a href="#" class="dropdown-item">Tajweed Quran Course</a>
+              <a href="#" class="dropdown-item">Quran Reading Course</a>
+              <a href="#" class="dropdown-item">Arabic Language Course</a>
+            </div>
+          </div>
+
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link" data-toggle="dropdown">
+              Academic Courses <i class="fa fa-angle-down float-right mt-1"></i>
+            </a>
+            <div
+              class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0"
+            >
+              <a href="#" class="dropdown-item">Urdu Course</a>
+              <a href="#" class="dropdown-item">English Course</a>
+              <a href="#" class="dropdown-item">Mathematics</a>
+              <a href="#" class="dropdown-item">Islamic Course / Kids</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Navbar + Logo -->
+    <div class="col-lg-9">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light py-2" id="mainNavbar">
+        
+        <!-- Left Logo (Desktop - Hidden Initially) -->
+        <a href="index.html" id="desktopLogo" class="d-none d-lg-block mr-4">
+          <img src="img/logoo-1.jpg" alt="AlMuaz Academy Logo">
+        </a>
+
+        <!-- Mobile Logo (Left Corner) -->
+        <a href="index.html" id="mobileLogo" class="d-block d-lg-none">
+          <img src="img/logoo-1.jpg" alt="AlMuaz Academy Logo">
+        </a>
+
+        <!-- Toggle Button -->
+        <button
+          class="navbar-toggler ml-auto"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
+          <div class="navbar-nav">
+            <a href="index.html" class="nav-item nav-link active">Home</a>
+            <a href="about.html" class="nav-item nav-link">About</a>
+            <a href="course.html" class="nav-item nav-link">Courses</a>
+            <a href="teacher.html" class="nav-item nav-link">Teachers</a>
+            <a href="single.html" class="nav-item nav-link">Blog</a>
+            <a href="contact.html" class="nav-item nav-link">Contact</a>
+          </div>
+
+          <!-- Right Button -->
+          <a
+            class="btn btn-primary py-2 px-4 ml-lg-4 d-none d-lg-block"
+            href="https://wa.me/923140530868?text=Assalamualaikum!%20I%20want%20to%20join%20your%20online%20Quran%20classes."
+            target="_blank"
+          >
+            Join Now
+          </a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<!-- Scroll Behavior -->
+<script>
+  window.addEventListener("scroll", function() {
+    const navbarContainer = document.getElementById("mainNavbarContainer");
+    if (window.scrollY > 80) {
+      navbarContainer.classList.add("scrolled");
+    } else {
+      navbarContainer.classList.remove("scrolled");
+    }
+  });
+</script>
+
+<!-- Navbar End -->
+
+<!-- INLINE CSS -->
+<style>
+@media (min-width: 992px) {
+  .navbar .dropdown:hover > .dropdown-menu {
+    display: block;
+  }
+  .dropdown-submenu {
+    position: relative;
+  }
+  .dropdown-submenu > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+  }
+  .dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+  }
+}
+.navbar .dropdown-menu {
+  transition: all 0.2s ease-in-out;
+  border-radius: 0;
+  background-color: #f8f9fa;
+}
+.navbar .dropdown-item:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+</style>
+
+<!-- INLINE JS -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // Make 'Our Courses' clickable
+  const coursesDropdown = document.getElementById("coursesDropdown");
+  coursesDropdown.addEventListener("click", function () {
+    window.location.href = this.getAttribute("href");
+  });
+
+  // Make 'Teachers' clickable
+  const teachersDropdown = document.getElementById("teachersDropdown");
+  teachersDropdown.addEventListener("click", function () {
+    window.location.href = this.getAttribute("href");
+  });
+
+  // Hover dropdowns for desktop
+  if (window.innerWidth > 992) {
+    document.querySelectorAll(".nav-item.dropdown").forEach(function (dropdown) {
+      dropdown.addEventListener("mouseenter", function () {
+        this.classList.add("show");
+        this.querySelector(".dropdown-menu").classList.add("show");
+      });
+      dropdown.addEventListener("mouseleave", function () {
+        this.classList.remove("show");
+        this.querySelector(".dropdown-menu").classList.remove("show");
+      });
+    });
+  }
+});
+</script>
+
+
+    <!-- Header Start -->
+    <div class="container-fluid page-header" style="margin-bottom: 90px;">
+        <div class="container">
+            <div class="d-flex flex-column justify-content-center" style="min-height: 300px">
+                <h3 class="display-4 text-white text-uppercase">Courses</h3>
+                <div class="d-inline-flex text-white">
+                    <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
+                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                    <p class="m-0 text-uppercase">Courses</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Category Start -->
+<div class="container-fluid py-5">
+  <div class="container pt-5 pb-3">
+    <div class="text-center mb-5">
+      <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Subjects</h5>
+      <h1>Explore Our Quran & Islamic Courses</h1>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="cat-item position-relative overflow-hidden rounded mb-2">
+          <img class="img-fluid" src="img/Noorani Qaida.jpg" alt="Quran Reading">
+          <a class="cat-overlay text-white text-decoration-none" href="#">
+            <h4 class="text-white font-weight-medium">Quran Reading (Nazra)</h4>
+            <span>120 Students</span>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="cat-item position-relative overflow-hidden rounded mb-2">
+          <img class="img-fluid" src="img/Quran with Tajweed1.jpg" alt="Tajweed Course">
+          <a class="cat-overlay text-white text-decoration-none" href="#">
+            <h4 class="text-white font-weight-medium">Tajweed ul Quran</h4>
+            <span>95 Students</span>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="cat-item position-relative overflow-hidden rounded mb-2">
+          <img class="img-fluid" src="img/Hifz-ul-Quran.jpg" alt="Hifz ul Quran">
+          <a class="cat-overlay text-white text-decoration-none" href="#">
+            <h4 class="text-white font-weight-medium">Hifz-ul-Quran (Memorization)</h4>
+            <span>80 Students</span>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="cat-item position-relative overflow-hidden rounded mb-2">
+          <img class="img-fluid" src="img/courses-Quran Translation & Tafseer.jpg" alt="Quran Translation Course">
+          <a class="cat-overlay text-white text-decoration-none" href="#">
+            <h4 class="text-white font-weight-medium">Quran Translation & Tafseer</h4>
+            <span>60 Students</span>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="cat-item position-relative overflow-hidden rounded mb-2">
+          <img class="img-fluid" src="img/courses-Quran Translation & Tafseer.jpg" alt="Arabic Language">
+          <a class="cat-overlay text-white text-decoration-none" href="#">
+            <h4 class="text-white font-weight-medium">Arabic Language Course</h4>
+            <span>70 Students</span>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="cat-item position-relative overflow-hidden rounded mb-2">
+          <img class="img-fluid" src="img/islamic-courses.jpg" alt="Islamic Studies">
+          <a class="cat-overlay text-white text-decoration-none" href="#">
+            <h4 class="text-white font-weight-medium">Islamic Studies for Kids</h4>
+            <span>150 Students</span>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="cat-item position-relative overflow-hidden rounded mb-2">
+          <img class="img-fluid" src="img/Kids Quran Course-courses.webp" alt="Female Quran Teacher">
+          <a class="cat-overlay text-white text-decoration-none" href="#">
+            <h4 class="text-white font-weight-medium">Female Quran Teachers</h4>
+            <span>40 Students</span>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="cat-item position-relative overflow-hidden rounded mb-2">
+          <img class="img-fluid" src="img/hafiz.webp" alt="Kids Quran Course">
+          <a class="cat-overlay text-white text-decoration-none" href="#">
+            <h4 class="text-white font-weight-medium">Quran for Beginners</h4>
+            <span>130 Students</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Category End -->
+
+
+<!-- Courses Start -->
+<div class="container-fluid py-5">
+  <div class="container py-5">
+    <div class="text-center mb-5">
+      <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Courses</h5>
+      <h1>Our Popular Online Quran Courses</h1>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="rounded overflow-hidden mb-2">
+          <img class="img-fluid" src="img/courses-Learn Quran for Beginners.jpg" alt="Learn Quran for Beginners">
+          <div class="bg-secondary p-4">
+            <div class="d-flex justify-content-between mb-3">
+              <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>50 Students</small>
+              <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>2 Months</small>
+            </div>
+            <a class="h5" href="#">Learn Quran for Beginners</a>
+            <div class="border-top mt-4 pt-4">
+              <div class="d-flex justify-content-between">
+                <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>5.0 <small>(320)</small></h6>
+                <h5 class="m-0">Free</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="rounded overflow-hidden mb-2">
+          <img class="img-fluid" src="img/courses-Tajweed Course (Rules of Quran).jpg" alt="Tajweed Course">
+          <div class="bg-secondary p-4">
+            <div class="d-flex justify-content-between mb-3">
+              <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>40 Students</small>
+              <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>3 Months</small>
+            </div>
+            <a class="h5" href="#">Tajweed Course (Rules of Quran)</a>
+            <div class="border-top mt-4 pt-4">
+              <div class="d-flex justify-content-between">
+                <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.9 <small>(210)</small></h6>
+                <h5 class="m-0">$29</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="rounded overflow-hidden mb-2">
+          <img class="img-fluid" src="img/courses-Hifz-ul-Quran (Memorization).jpg" alt="Hifz Quran Course">
+          <div class="bg-secondary p-4">
+            <div class="d-flex justify-content-between mb-3">
+              <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>35 Students</small>
+              <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>Flexible</small>
+            </div>
+            <a class="h5" href="#">Hifz-ul-Quran (Memorization)</a>
+            <div class="border-top mt-4 pt-4">
+              <div class="d-flex justify-content-between">
+                <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>5.0 <small>(150)</small></h6>
+                <h5 class="m-0">$49</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Courses End -->
+
+
+   <!-- Footer Start -->
+<div class="container-fluid bg-dark text-white py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+  <div class="row pt-5">
+    <div class="col-lg-7 col-md-12">
+      <div class="row">
+        <!-- Contact Info -->
+        <div class="col-md-6 mb-5">
+          <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Get In Touch</h5>
+          <p><i class="fa fa-map-marker-alt mr-2"></i>Lahore, Pakistan</p>
+          <p><i class="fa fa-phone-alt mr-2"></i>+92 312 3456789</p>
+          <p><i class="fa fa-envelope mr-2"></i>info@almuazacademy.com</p>
+          <div class="d-flex justify-content-start mt-4">
+            <a class="btn btn-outline-light btn-square mr-2" href="https://www.facebook.com/profile.php?id=61582747927245&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-outline-light btn-square mr-2" href="https://www.instagram.com/almuaztech?igsh=MXg5ajczZWx2M2RsNA== "><i class="fab fa-instagram"></i></a>
+            <a class="btn btn-outline-light btn-square mr-2" href="https://www.linkedin.com/in/usman-awan-892a501b3/"><i class="fab fa-linkedin-in"></i></a>
+            <a class="btn btn-outline-light btn-square" href="https://www.youtube.com/@Pala0077"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Courses -->
+        <div class="col-md-6 mb-5">
+          <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Our Courses</h5>
+          <div class="d-flex flex-column justify-content-start">
+            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Quran with Tajweed</a>
+            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Quran Memorization (Hifz)</a>
+            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Basic Qaida for Kids</a>
+            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Islamic Studies</a>
+            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Arabic Language Course</a>
+            <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Online Quran Translation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="col-lg-5 col-md-12 mb-5">
+      <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Join Our Newsletter</h5>
+      <p>Subscribe to get the latest updates, new course announcements, and exclusive offers from AlMuaz Academy.</p>
+      <div class="w-100">
+        <div class="input-group">
+          <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Your Email Address">
+          <div class="input-group-append">
+            <button class="btn btn-primary px-4">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bottom Bar -->
+<div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" 
+     style="border-color: rgba(256, 256, 256, .1) !important;">
+  <div class="row">
+    <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+      <p class="m-0 text-white">
+        &copy; <a href="#"></a>All Rights Reserved. Designed by <a href="#">AlMuazTech</a>
+      </p>
+    </div>
+    <div class="col-lg-6 text-center text-md-right">
+      <ul class="nav d-inline-flex">
+        <li class="nav-item"><a class="nav-link text-white py-0" href="#">Privacy</a></li>
+        <li class="nav-item"><a class="nav-link text-white py-0" href="#">Terms</a></li>
+        <li class="nav-item"><a class="nav-link text-white py-0" href="#">FAQs</a></li>
+        <li class="nav-item"><a class="nav-link text-white py-0" href="#">Help</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- Footer End -->
+
+
+
+   <!-- WhatsApp Chat Button -->
+<a 
+  href="https://wa.me/923123456789?text=Hello%20AlMuaz%20Academy!%20👋%0AI'm%20interested%20in%20learning%20more%20about%20your%20courses.%20Can%20you%20please%20share%20details?"
+  target="_blank" 
+  class="btn btn-lg btn-success btn-lg-square whatsapp-btn"
+  title="Chat with AlMuaz Academy on WhatsApp"
+>
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Custom Style -->
+<style>
+  .whatsapp-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 1000;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+  }
+
+  .whatsapp-btn:hover {
+    transform: scale(1.1);
+    background-color: #1ebe5a;
+    color: #fff;
+  }
+
+  .whatsapp-btn i {
+    font-size: 28px;
+  }
+</style>
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
